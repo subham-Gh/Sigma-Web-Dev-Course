@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variebles</title>
+    <style>
+      /* Global variable */
+      :root {
+        --color: rgb(255, 0, 247);
+        --seccolor: rgb(231, 164, 246);
+        --dfepad: 34px;
+        --defop: 0.2;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        /* background-color: rgb(22, 167, 112); */
+        background-color: var(--color);
+      }
+
+      ul {
+        display: flex;
+      }
+
+      ul li {
+        opacity: var(--dfepad);
+        list-style: none;
+        padding: var(--dfepad);
+        border: 2px solid var(--seccolor);
+      }
+
+      ul li:first-child {
+        /* Local variable */
+        /* --color: rgb(243, 87, 8); */
+        background-color: var(--color, blue);
+      }
+
+      .container {
+        background-color: var(--seccolor);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque laboriosam
+      nisi exercitationem natus facere, consectetur labore facilis quas illo
+      earum, excepturi debitis architecto quibusdam laborum!
+    </div>
+  </body>
+</html>
